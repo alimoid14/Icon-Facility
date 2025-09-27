@@ -1,0 +1,57 @@
+.outer{
+    display: grid;
+    margin-bottom: 5%;
+}
+.details{
+    align-items:center;
+    justify-content: end;
+    
+}
+.inputContainer{
+    margin: 1% 0;
+}
+.contactForm{
+    margin-left: 5%;
+}
+
+@media screen and (max-width:600px){
+    .outer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .details{
+        
+        justify-content: center;
+    }
+    .contactForm{
+        justify-content: center;
+        margin-left: 0;
+        margin-bottom: 10%;       
+    }
+    .formContainer{
+        
+        text-align: center;
+        
+    }
+    .inputContainer{
+        width: 100%;
+        flex-direction: column;
+        
+        align-items: center;
+        justify-content: center;
+        margin: 5% 0;
+    }
+    .cardBody{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .cardBodyHeading{
+        text-align: center;
+        width: 100%;
+    }
+}

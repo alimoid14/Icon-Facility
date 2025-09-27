@@ -1,0 +1,13 @@
+body{
+    overflow-x: hidden;
+}
+.active-link{
+    background-color: #4294e1;
+    color: #fff;
+}
+*{
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+    overflow: hidden;
+}

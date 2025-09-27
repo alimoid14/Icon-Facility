@@ -1,0 +1,17 @@
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .homeCard {
+    width: 100%;   /* make it shrink nicely */
+    min-width: 400px;
+    max-width: 600px;
+    
+    margin: 2% auto ;
+  }
+  .homeCard h4{
+    overflow: hidden;
+  }
+}

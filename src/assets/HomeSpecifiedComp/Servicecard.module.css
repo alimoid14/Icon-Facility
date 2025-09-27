@@ -1,0 +1,19 @@
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    *{
+        overflow-x: hidden;
+    }
+  .service {
+    width: 90%;   /* make it shrink nicely */
+    
+    margin-bottom: 2%;
+  }
+  .service h2{
+    overflow: hidden;
+  }
+}

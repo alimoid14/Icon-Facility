@@ -1,0 +1,19 @@
+.aboutimage{
+    width: 45%;
+    float: right;
+    margin-right: 5%;
+}
+.textcont{
+    margin: 0 8%;
+}
+
+@media screen and (max-width:600px){
+    .aboutimage{
+        float: none;
+        width: 100%;
+    }
+    .textcont{
+        margin: 8% 0;
+    }
+
+}

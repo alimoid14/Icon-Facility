@@ -1,0 +1,30 @@
+.foot{
+    background-color: #3e4853;
+
+}
+.foot a{
+    text-decoration: none;
+    color: white;
+    margin-top: 4%;
+}
+footer nav{
+    width: 18%;
+}
+
+@media screen and  (max-width:600px){
+    footer {
+    display: flex;
+    flex-direction: column; /* stack sections vertically */
+    align-items: center;    /* center horizontally */
+    text-align: center;     /* center text inside */
+  }
+    footer nav{
+        width: 90%;
+        margin: 1% auto;
+    }
+    footer form {
+    width: 90%;
+    margin-bottom: 1.5rem;
+  }
+    
+}
