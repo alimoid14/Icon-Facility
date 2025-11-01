@@ -1,14 +1,14 @@
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Offcanvas from "react-bootstrap/Offcanvas";
 
-import { Link, useNavigate } from 'react-router-dom';
-import './Header.css';
+import { Link, useNavigate } from "react-router-dom";
+import "./Header.css";
 
 function Header() {
   const styles = { textDecoration: "none", color: "#333" };
@@ -24,18 +24,18 @@ function Header() {
 
   return (
     <>
-      {['lg'].map((expand) => (
+      {["lg"].map((expand) => (
         <Navbar
           key={expand}
           expand={expand}
-          className="mb-3 navb pe-5"
-          style={{ height: '7vh' }}
+          className="navb pe-5"
+          style={{ height: "7vh" }}
         >
           <Container fluid>
             <Navbar.Brand
               href="/"
               className="text-white fs-6"
-              style={{ marginLeft: '14%' }}
+              style={{ marginLeft: "14%" }}
             >
               We’re Industrial Cleaners
             </Navbar.Brand>
@@ -52,10 +52,20 @@ function Header() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to="/" className="text-white fw-bold" style={styles}>
+                  <Nav.Link
+                    as={Link}
+                    to="/"
+                    className="text-white fw-bold"
+                    style={styles}
+                  >
                     Home
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/about" className="text-white fw-bold" style={styles}>
+                  <Nav.Link
+                    as={Link}
+                    to="/about"
+                    className="text-white fw-bold"
+                    style={styles}
+                  >
                     About
                   </Nav.Link>
 
@@ -66,8 +76,7 @@ function Header() {
                     className="form-select bg-transparent outline-none border-0 ms-2 md:ml-0 fw-bold "
                     style={{ width: "auto", display: "inline-block" }}
                   >
-                    
-                    <option value="/services" >Services</option>
+                    <option value="/services">Services</option>
                     <option value="/projects">Projects</option>
                     <option value="/contact">Contact</option>
                     <option value="/Team">Our Team</option>
@@ -88,7 +97,10 @@ function Header() {
                     className="text-white border-0"
                     size="sm"
                   >
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    <FontAwesomeIcon
+                      className="bg-black p-[6px]"
+                      icon={faMagnifyingGlass}
+                    />
                   </Button>
                 </Form>
               </Offcanvas.Body>

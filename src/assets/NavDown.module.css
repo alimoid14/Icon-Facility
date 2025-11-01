@@ -1,18 +1,6 @@
-.navDetails{
-    width: 60%;
+.navLinks {
+  display: none;
 }
-@media screen and (max-width:600px){
-    .navLinks{
-        display: none;
-    }
-    .enquiry{
-        margin: 3% auto;
-    }
-    .navDetails{
-        display: block;
-        margin: 1% 0;
-        margin-left: 20%;
-        
-    }
-
+.enquiry {
+  margin: 3% auto;
 }
