@@ -1,4 +1,4 @@
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FiSearch } from "react-icons/fi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -6,6 +6,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { CiMenuBurger } from "react-icons/ci";
 
 import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
@@ -34,12 +35,16 @@ function Header() {
           <Container fluid>
             <Navbar.Brand
               href="/"
-              className="text-white fs-6"
-              style={{ marginLeft: "14%" }}
+              className="text-white !text-2xl md:!text-3xl font-bold ml-12"
             >
               We’re Industrial Cleaners
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Toggle
+              aria-controls={`offcanvasNavbar-expand-${expand}`}
+              className="border-2 !rounded-full !border-gray-500 !ring-0 active:!outline-none focus:outline-none text-gray-700 p-2 hover:!bg-gray-200 bg-white"
+            >
+              <CiMenuBurger />
+            </Navbar.Toggle>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -51,7 +56,7 @@ function Header() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav className="justify-content-end flex-grow-1 flex flex-col gap-6 md:flex-row">
                   <Nav.Link
                     as={Link}
                     to="/"
@@ -73,7 +78,7 @@ function Header() {
                   <select
                     onChange={handleSelectChange}
                     defaultValue=""
-                    className="form-select bg-transparent outline-none border-0 ms-2 md:ml-0 fw-bold "
+                    className="py-2 m-0  bg-transparent outline-none border-0 fw-bold hover:cursor-pointer"
                     style={{ width: "auto", display: "inline-block" }}
                   >
                     <option value="/services">Services</option>
@@ -81,28 +86,23 @@ function Header() {
                     <option value="/contact">Contact</option>
                     <option value="/Team">Our Team</option>
                   </select>
-                </Nav>
 
-                {/* ✅ Search Bar */}
-                <Form className="d-flex">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-1 form-control-sm mt-2 ms-1"
-                    style={{ height: "25px" }}
-                    aria-label="Search"
-                  />
-                  <Button
-                    variant="outline-success"
-                    className="text-white border-0"
-                    size="sm"
-                  >
-                    <FontAwesomeIcon
-                      className="bg-black p-[6px]"
-                      icon={faMagnifyingGlass}
+                  {/* ✅ Search Bar */}
+                  <Form className="flex gap-0 bg-white !rounded-full border border-gray-300">
+                    <Form.Control
+                      type="search"
+                      placeholder="Search"
+                      className="form-control-sm !roundeed-none !border-none"
+                      aria-label="Search"
                     />
-                  </Button>
-                </Form>
+                    <Button
+                      variant="outline-success"
+                      className="text-black bg-white border-0 !rounded-none"
+                    >
+                      <FiSearch />
+                    </Button>
+                  </Form>
+                </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

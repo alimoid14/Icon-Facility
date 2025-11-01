@@ -1,19 +1,18 @@
-.mapAlign{
-    width: 45vw;
-    min-height: 45vh;
+.mapAlign {
+  width: 45vw;
+  min-height: 45vh;
 }
-@media screen and (max-width:600px){
-    .container{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .mapAlign{
-        width: 90vw;
-        height: 60vh;
-    }
-    .head{
-        text-align: center;
-        margin-top: 5%;
-    }
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mapAlign {
+  width: 90vw;
+  height: 60vh;
+}
+.head {
+  text-align: center;
+  margin-top: 5%;
 }

@@ -41,7 +41,9 @@ function ContactSec() {
         <div
           className={`card  bg-base-100 card-lg shadow-sm bg-transparent mt-5 mb-2 ${styles.formContainer}`}
         >
-          <p style={{ color: "#fff" }}>Please enter your details:</p>
+          <p className="text-xl" style={{ color: "#fff" }}>
+            Please enter your details:
+          </p>
         </div>
 
         <div className={`form `} style={{ color: "#fff" }}>
@@ -75,7 +77,7 @@ function ContactSec() {
               className={`fieldset d-flex flex-wrap ${styles.inputContainer}`}
             >
               <input
-                type="number"
+                type="text"
                 className="input !overflow-clip"
                 placeholder="Your Phone number.."
                 style={{ color: "white", fontSize: "18px" }}
