@@ -22,8 +22,9 @@ function FormElement() {
 
   return (
     <>
-      <form className="!w-fit !mx-auto">
-        <fieldset className="fieldset d-flex flex-wrap my-3 ">
+      <form className="!w-fit !mx-auto" aria-label="Message Form">
+        <fieldset className="fieldset d-flex flex-wrap my-3">
+          <legend className="sr-only">Name and Email</legend>
           <div className="inputcon d-flex flex-column mx-2 w-full">
             <label
               htmlFor="name"
@@ -61,6 +62,7 @@ function FormElement() {
         </fieldset>
 
         <fieldset className="fieldset d-flex flex-wrap my-3">
+          <legend className="sr-only">Phone and subject</legend>
           <div className="inputcon d-flex flex-column mx-2 w-full">
             <label
               htmlFor="number"
@@ -70,7 +72,7 @@ function FormElement() {
               Enter phone number:{" "}
             </label>
             <input
-              type="number"
+              type="tel"
               id="number"
               className="input text-white w-full"
               placeholder="Your phone number.."
@@ -97,6 +99,7 @@ function FormElement() {
         </fieldset>
 
         <fieldset className="fieldset d-flex flex-wrap my-3">
+          <legend className="sr-only">Message</legend>
           <div className="inputcon d-flex flex-column mx-2 w-full">
             <label
               htmlFor="message"
@@ -106,7 +109,6 @@ function FormElement() {
               Write your message:{" "}
             </label>
             <textarea
-              type="text"
               id="message"
               className="textarea text-white w-full"
               placeholder="Enter your message"
@@ -116,6 +118,7 @@ function FormElement() {
         </fieldset>
 
         <button
+          type="submit"
           className="btn btn-primary w-11/12 !block !mx-auto !rounded-full"
           onClick={submitForm}
         >
@@ -123,7 +126,7 @@ function FormElement() {
         </button>
       </form>
       {showResult && (
-        <div className="result mt-3">
+        <div className="result mt-3" role="status">
           <p className="fw-bold text-lg">
             Thank you for filling out the form. Someone will reach out to you
             quickly!

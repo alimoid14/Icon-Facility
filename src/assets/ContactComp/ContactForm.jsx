@@ -10,10 +10,13 @@ import FormElement from "./FormElement";
 function ContactForm() {
   return (
     <>
-      <div
+      <section
         className={`flex flex-col justify-center items-center w-full d-flex my-5 ${styles.container}`}
       >
-        <div className="form w-50 d-flex flex-column flex-wrap me-3 text-wrap mb-4">
+        <div
+          className="form w-50 d-flex flex-column flex-wrap me-3 text-wrap mb-4"
+          aria-label="Message form container"
+        >
           <h2 className="text-center">Send us a message</h2>
           <p className="text-secondary text-center">
             Feel free to get in touch by phone or through the contact form
@@ -38,7 +41,7 @@ function ContactForm() {
             ></iframe>
           </div>
 
-          <div className="address d-flex my-4 ">
+          <div className="address d-flex my-4" aria-label="Adress and Contact">
             <div className="container d-flex-column flex-wrap mb-2">
               <h3>Company Address</h3>
               <p className="text-secondary">
@@ -47,9 +50,21 @@ function ContactForm() {
                 <br /> New Delhi - 110085,
               </p>
               <div className="icons d-flex">
-                <FontAwesomeIcon className="text-xl" icon={faFacebook} />
-                <FontAwesomeIcon className="text-xl" icon={faXTwitter} />
-                <FontAwesomeIcon className="text-xl" icon={faLinkedin} />
+                <FontAwesomeIcon
+                  className="text-xl"
+                  icon={faFacebook}
+                  aria-label="Facebook"
+                />
+                <FontAwesomeIcon
+                  className="text-xl"
+                  icon={faXTwitter}
+                  aria-label="Twitter"
+                />
+                <FontAwesomeIcon
+                  className="text-xl"
+                  icon={faLinkedin}
+                  aria-label="LinkedIn"
+                />
               </div>
             </div>
 
@@ -69,7 +84,7 @@ function ContactForm() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

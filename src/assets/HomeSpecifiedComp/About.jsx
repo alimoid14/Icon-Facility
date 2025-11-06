@@ -3,17 +3,21 @@ import styles from "./About.module.css";
 function About() {
   return (
     <>
-      <div className="card    my-5 " style={{ padding: "3% 0" }}>
+      <section
+        className="card    my-5 "
+        style={{ padding: "3% 0" }}
+        aria-labelledby="about-company"
+      >
         <div className="card1-body border-none outline-none">
           <div
             className="item px-5"
             style={{ width: "100vw", paddingLeft: "10%" }}
           >
             <div className={`text2 ${styles.textcont} `}>
-              <h5 className="card1" style={{ color: "#4294e1" }}>
-                Our Advantages
-              </h5>
-              <h1>About our Company</h1>
+              <h2 id="about-company" className="!text-blue-500">
+                About our Company
+              </h2>
+              <h3>Our Advantages</h3>
               <p>
                 We are revolutionizing housekeeping with state-of-the-art
                 automated systems. From ride-on scrubbers, dryers, and sweepers
@@ -23,7 +27,7 @@ function About() {
                 <br />
               </p>
               <br />
-              <h2>Best Service Provider</h2>
+              <h3>Best Service Provider</h3>
               <p>
                 We believe that true service is the highest calling — an act of
                 nobility rendered purely for its own sake
@@ -56,7 +60,7 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

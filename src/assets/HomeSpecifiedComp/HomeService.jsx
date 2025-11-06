@@ -10,7 +10,10 @@ import Servicecard from "./Servicecard";
 function HomeService() {
   return (
     <>
-      <div className="flex flex-wrap my-5 justify-center !items-stretch">
+      <section
+        className="flex flex-wrap my-5 justify-center !items-stretch"
+        aria-label="Service card container"
+      >
         <Servicecard
           imgsrc={cleaning}
           title="Construction Cleaning"
@@ -51,7 +54,7 @@ function HomeService() {
           caption="Any building or structure more than two stories high requires special window…"
           className="w-80"
         />
-      </div>
+      </section>
     </>
   );
 }

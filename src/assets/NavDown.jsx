@@ -20,15 +20,22 @@ function NavDown() {
 
   return (
     <>
-      <div className="navbar bg-base-100 shadow-sm me-0 pe-1 text-white flex flex-col">
+      <header
+        className="navbar bg-base-100 shadow-sm me-0 pe-1 text-white flex flex-col"
+        aria-label="Navigation Layer 2"
+      >
         <div className="navbar-start h-25 mx-auto">
-          <a className="btn btn-ghost text-xl mb-3 w-100 h-100 block mx-auto">
-            <Link to="/">
-              <img src={logo} alt="" className="h-10 mx-auto" />
-            </Link>
-          </a>
+          <Link
+            to="/"
+            className="btn btn-ghost text-xl mb-3 w-100 h-100 block mx-auto"
+          >
+            <img src={logo} alt="Icon-Facility logo" className="h-10 mx-auto" />
+          </Link>
         </div>
-        <div className="nav flex flex-col md:flex-row !flex-wrap gap-x-8 px-4 md:px-6 mr-auto md:mx-auto">
+        <div
+          className="nav flex flex-col md:flex-row !flex-wrap gap-x-8 px-4 md:px-6 mr-auto md:mx-auto"
+          aria-label="Contanct and Info"
+        >
           <div className="phone">
             <FontAwesomeIcon icon={faPhone} /> +91 09910259922
           </div>
@@ -41,12 +48,12 @@ function NavDown() {
             17:00
           </div>
           <div className="social ">
-            <FontAwesomeIcon icon={faFacebook} />
-            <FontAwesomeIcon icon={faX} />
-            <FontAwesomeIcon icon={faYoutube} />
+            <FontAwesomeIcon icon={faFacebook} aria-label="Facebook" />
+            <FontAwesomeIcon icon={faX} aria-label="Twitter" />
+            <FontAwesomeIcon icon={faYoutube} aria-label="Youtube" />
           </div>
         </div>
-      </div>
+      </header>
       <div
         className="nav-pages"
         style={{
@@ -57,14 +64,19 @@ function NavDown() {
         }}
       >
         {/* nav layer 3 */}
-        <div className="w-full flex flex-row justify-center pt-3 items-center">
+        <div
+          className="w-full flex flex-row justify-center pt-3 items-center"
+          aria-label="Navigation Layer 3"
+        >
           <button
+            type="button"
             className="btn me-2 px-2"
             style={{ backgroundColor: "#115599", color: "#fff" }}
           >
             Request Estimate
           </button>
           <button
+            type="button"
             className="btn "
             style={{ backgroundColor: "#4294e1", color: "#fff" }}
           >

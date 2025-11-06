@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 function CarouselCont({ displaybut, imgsrc, smalltxt, bigtxt1, bigtxt2 }) {
   return (
     <>
-      <div
-        className="carousel w-full  mt-3 "
+      <section
+        className="carousel w-full mt-3 flex flex-col items-center justify-center text-center"
         style={{
           minHeight: "70vh",
           backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${imgsrc})`,
@@ -15,18 +15,21 @@ function CarouselCont({ displaybut, imgsrc, smalltxt, bigtxt1, bigtxt2 }) {
           boxShadow: "#333",
           backgroundPosition: "center",
         }}
+        role="banner"
       >
-        <h6 style={{ color: "#f7d32d" }}>{smalltxt} </h6>
-        <h2 style={{ color: "#fff", textAlign: "center" }}>
+        <p style={{ color: "#f7d32d" }}>{smalltxt} </p>
+        <h1 style={{ color: "#fff", textAlign: "center" }}>
           {bigtxt1}
           <br />
           {bigtxt2}
-        </h2>
-        <div
+        </h1>
+        <Link
+          to="/services"
           style={
             displaybut === "none"
               ? { display: "none" }
               : {
+                  textDecoration: "none",
                   backgroundColor: "#4294e1",
                   color: "#fff",
                   padding: ".5% 1%",
@@ -34,14 +37,9 @@ function CarouselCont({ displaybut, imgsrc, smalltxt, bigtxt1, bigtxt2 }) {
                 }
           }
         >
-          <Link
-            to="/services"
-            style={{ textDecoration: "none", color: "#fff" }}
-          >
-            Services
-          </Link>
-        </div>
-      </div>
+          Services
+        </Link>
+      </section>
     </>
   );
 }
