@@ -7,6 +7,7 @@ import HomeService from "../assets/HomeSpecifiedComp/HomeService";
 import Map from "../assets/HomeSpecifiedComp/Map";
 import Project from "../assets/HomeSpecifiedComp/Project";
 import NavDown from "../assets/NavDown";
+import ContactFormPopup from "../assets/ContactFormPopup";
 import ExampleCarouselImage from "../assets/pics/ExampleCarouselImage.jpg";
 
 function Home() {
@@ -45,6 +46,8 @@ function Home() {
         <meta name="twitter:description" content={pageDesc} />
         <meta name="twitter:image" content={heroImg} />
       </Helmet>
+
+      <ContactFormPopup />
 
       <NavDown
         homeact="active-link"

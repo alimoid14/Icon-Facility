@@ -114,7 +114,7 @@ function Team() {
         <meta property="og:type" content="website" />
         {/* Upload after hosting: <meta property="og:url" content={pageUrl} /> */}
 
-        {/* ✅ Twitter Card */}
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
@@ -138,9 +138,10 @@ function Team() {
 
       <Filter cardSelected={cardSelected} setCardSelected={setCardSelected} />
 
-      <div className="members d-flex flex-wrap gap-5 align-items-center justify-content-center mb-5 p-5 bg-dark">
+      <div className="members flex flex-wrap gap-5 align-items-center justify-content-center mb-5 p-5 bg-dark !items-stretch">
         {filteredMembers.map((m, idx) => (
           <MemberCard
+            className="w-80"
             key={idx}
             imgsrc={m.img}
             title={m.title}

@@ -1,31 +1,38 @@
 import React from "react";
-import styles from './ContactSec.module.css'
+import styles from "./ContactSec.module.css";
 
 function ContactSec() {
-
-    function submitForm(e){
-        e.preventDefault()
-        setTimeout(()=>{
-            document.getElementById("result").style.display="none";
-        },3000)
-        document.getElementById("result").style.display="block";
-        document.querySelectorAll("input").forEach(el=>el.value="")
-        document.querySelector("select").selectedIndex=0;
-    }
+  function submitForm(e) {
+    e.preventDefault();
+    setTimeout(() => {
+      document.getElementById("result").style.display = "none";
+    }, 3000);
+    document.getElementById("result").style.display = "block";
+    document.querySelectorAll("input").forEach((el) => (el.value = ""));
+    document.querySelector("select").selectedIndex = 0;
+  }
 
   return (
-    <div
+    <section
       className={` w-full bg-dark min-h-75  ${styles.outer}`}
       style={{ gridTemplateColumns: "35% 65%" }}
     >
-      <div className={` d-flex flex-wrap  ${styles.details}` }>
+      <div
+        className={` d-flex flex-wrap  ${styles.details}`}
+        aria-label="Form description"
+      >
         <div
           class="card w-96 bg-base-100 card-lg shadow-sm px-4 pt-4"
           style={{ background: "transparent", color: "#fff" }}
         >
-          <div classname={`card-body ${styles.cardBody}`}>
-            <h5 className={styles.cardBodyHeading} style={{ color: "#f7d32d" }}>Discuss Details</h5>
-            <h1 className={styles.cardBodyHeading}>Request Call Back</h1>
+          <div
+            className={`card-body ${styles.cardBody}`}
+            aria-label="Message form description"
+          >
+            <h2 className={styles.cardBodyHeading} style={{ color: "#f7d32d" }}>
+              Discuss Details
+            </h2>
+            <h3 className={styles.cardBodyHeading}>Request Call Back</h3>
             <p className={styles.cardBodyHeading}>
               Enter your details in the form and your message will be dispatched
               directly to our staff who will get in touch with you as soon as
@@ -34,58 +41,72 @@ function ContactSec() {
           </div>
         </div>
       </div>
-      <div className={` d-flex-column   align-items-center ${styles.contactForm}`} >
-        <div className={`card  bg-base-100 card-lg shadow-sm bg-transparent mt-5 mb-2 ${styles.formContainer}`}>
-          <p style={{ color: "#fff" }}>Please enter your details:</p>
+      <div
+        className={` d-flex-column   align-items-center ${styles.contactForm}`}
+        aria-label="Message form Container"
+      >
+        <div
+          className={`card  bg-base-100 card-lg shadow-sm bg-transparent mt-5 mb-2 ${styles.formContainer}`}
+        >
+          <p className="text-xl" style={{ color: "#fff" }}>
+            Please enter your details:
+          </p>
         </div>
 
-        <div className={`form `} style={{color:"#fff"}}>
-          
-          <form>
-            <fieldset className={`fieldset d-flex flex-wrap ${styles.inputContainer}`}>
-        
+        <div className={`form `} style={{ color: "#fff" }}>
+          <form className={`d-flex gap-4 flex-wrap ${styles.inputContainer}`}>
             <input
               type="text"
-              className="input"
+              className="input text-white"
               placeholder="Your Name.."
-              style={{color:"#333",fontSize:"18px"}}
+              style={{ color: "#333", fontSize: "18px" }}
               required
+              aria-label="Your Name"
             />
-            
-            <select className="bg-light text-dark px-5 input " style={{fontSize:"18px"}} required>
-                <option value="Industrial Cleaning">Industrial Cleaning</option>
-                <option value="Contract Cleaning">Contract Cleaning</option>
-                <option value="Office Cleaning">Office Cleaning</option>
-                <option value="Builders Cleaning">Builders Cleaning</option>
-                <option value="Hotel Cleaning">Hotel Cleaning</option>
-                <option value="Other">Other</option>
+
+            <select
+              className="px-5 input"
+              style={{ fontSize: "18px" }}
+              required
+              aria-label="Select service"
+            >
+              <option value="Industrial Cleaning">Industrial Cleaning</option>
+              <option value="Contract Cleaning">Contract Cleaning</option>
+              <option value="Office Cleaning">Office Cleaning</option>
+              <option value="Builders Cleaning">Builders Cleaning</option>
+              <option value="Hotel Cleaning">Hotel Cleaning</option>
+              <option value="Other">Other</option>
             </select>
-          </fieldset>
 
-          <fieldset className={`fieldset d-flex flex-wrap ${styles.inputContainer}`}>
-        
             <input
-              type="number"
-              className="input"
+              type="text"
+              className="input !overflow-clip"
               placeholder="Your Phone number.."
-              style={{color:"#333",fontSize:"18px"}}
+              style={{ color: "white", fontSize: "18px" }}
               required
+              aria-label="Your phone number"
             />
 
-            <button className="btn btn-primary input overflow-hidden" onClick={submitForm} style={{fontSize:"18px"}}> Call me back</button>
-            
-            
-          </fieldset>
+            <button
+              className="btn btn-primary input overflow-hidden"
+              onClick={submitForm}
+              style={{ fontSize: "18px" }}
+              type="submit"
+            >
+              {" "}
+              Call me back
+            </button>
           </form>
 
-          <div className="result mt-5" id="result" style={{display:"none"}} >
-            <h5>Thank you for contacting us. Someone from our team will contact you shortly!</h5>
+          <div className="result mt-5" id="result" style={{ display: "none" }}>
+            <p>
+              Thank you for contacting us. Someone from our team will contact
+              you shortly!
+            </p>
           </div>
-          
-
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
