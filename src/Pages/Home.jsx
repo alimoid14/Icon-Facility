@@ -15,7 +15,7 @@ function Home() {
   const pageDesc =
     "ICON Facility delivers professional industrial cleaning and facility management solutions across India — making your business shine since 1989.";
   const heroImg = ExampleCarouselImage;
-  // const pageUrl = "https://yourdomain.com/";
+  // Update after hosting: const pageUrl = "https://yourdomain.com/";
   return (
     <>
       <Helmet>
