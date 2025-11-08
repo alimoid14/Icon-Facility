@@ -35,7 +35,6 @@
 
 .offcanvas-header .btn-close {
   background-color: #f8f8f8;
-  border-radius: 50%;
   border: 1px solid #ccc;
   opacity: 1; /* make it fully visible */
   transition: all 0.2s ease-in-out;

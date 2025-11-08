@@ -22,8 +22,8 @@ function FormElement() {
 
   return (
     <>
-      <form className="!w-fit !mx-auto" aria-label="Message Form">
-        <fieldset className="fieldset d-flex flex-wrap my-3">
+      <form className="!mx-auto" aria-label="Message Form">
+        <fieldset className="fieldset d-flex flex-wrap">
           <legend className="sr-only">Name and Email</legend>
           <div className="inputcon d-flex flex-column mx-2 w-full">
             <label

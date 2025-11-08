@@ -11,10 +11,10 @@ function ContactForm() {
   return (
     <>
       <section
-        className={`flex flex-col justify-center items-center w-full d-flex my-5 ${styles.container}`}
+        className={`max-w-7xl mx-auto flex flex-col md:!flex-row gap-4 justify-center w-full my-5 ${styles.container}`}
       >
         <div
-          className="form w-50 d-flex flex-column flex-wrap me-3 text-wrap mb-4"
+          className="form w-50 d-flex flex-column flex-wrap flex-1 md:self-start"
           aria-label="Message form container"
         >
           <h2 className="text-center">Send us a message</h2>
@@ -26,10 +26,10 @@ function ContactForm() {
           <FormElement />
         </div>
 
-        <div className="location d-flex flex-column ms-3">
+        <div className="location flex flex-col flex-1">
           <h2 className={`container ${styles.head}`}>Office Location</h2>
 
-          <div className={`container my-4 ${styles.mapAlign}`}>
+          <div className={`container my-0 ${styles.mapAlign}`}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.3182142901646!2d77.09218907495969!3d28.710034680557918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d06aec46073a5%3A0x5a3f5241591ad71a!2sICON%20HOUSEKEEPING%20SERVIES%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1758915212407!5m2!1sen!2sin"
               width="100%"

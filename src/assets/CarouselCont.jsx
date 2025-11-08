@@ -7,7 +7,7 @@ function CarouselCont({ displaybut, imgsrc, smalltxt, bigtxt1, bigtxt2 }) {
   return (
     <>
       <section
-        className="carousel w-full mt-3 flex flex-col items-center justify-center text-center"
+        className="carousel w-full mt-2 flex flex-col items-center justify-center text-center"
         style={{
           minHeight: "70vh",
           backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${imgsrc})`,

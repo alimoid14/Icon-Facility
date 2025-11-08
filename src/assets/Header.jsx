@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { CiMenuBurger } from "react-icons/ci";
+import { BsMenuButtonWideFill } from "react-icons/bs";
 
 import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
@@ -24,26 +24,23 @@ function Header() {
   };
 
   return (
-    <>
+    <header className="fixed w-full z-10 navb">
       {["lg"].map((expand) => (
         <Navbar
           key={expand}
           expand={expand}
-          className="navb pe-5"
+          className="px-2 md:!px-4 lg:!px-12 max-w-7xl mx-auto"
           style={{ height: "7vh" }}
         >
           <Container fluid>
-            <Navbar.Brand
-              href="/"
-              className="text-white !text-2xl md:!text-3xl font-bold ml-12"
-            >
+            <Navbar.Brand href="/" className="text-white fs-6">
               We’re Industrial Cleaners
             </Navbar.Brand>
             <Navbar.Toggle
               aria-controls={`offcanvasNavbar-expand-${expand}`}
-              className="border-2 !rounded-full !border-gray-500 !ring-0 active:!outline-none focus:outline-none text-gray-700 p-2 hover:!bg-gray-200 bg-white"
+              className="!ring-0 !border-0 active:!outline-none focus:outline-none p-2 text-white hover:!text-blue-500 hover:!bg-white bg-[rgb(66, 148, 225)] !transition-colors !duration-300 !ease-in-out"
             >
-              <CiMenuBurger />
+              <BsMenuButtonWideFill />
             </Navbar.Toggle>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -108,7 +105,7 @@ function Header() {
           </Container>
         </Navbar>
       ))}
-    </>
+    </header>
   );
 }
 
