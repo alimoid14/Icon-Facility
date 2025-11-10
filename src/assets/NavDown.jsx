@@ -29,12 +29,15 @@ function NavDown({
   return (
     <>
       <header
-        className="navbar bg-base-100 shadow-sm text-white mt-[64px] mb-2"
+        className="navbar bg-black shadow-sm text-white mt-[64px] mb-2"
         aria-label="Navigation Layer 2"
       >
-        <div className="w-full max-w-7xl md:px-0 lg:px-12 mx-auto flex flex-col lg:flex-row items-center justify-between">
-          <div className="h-25">
-            <Link to="/" className="btn btn-ghost text-xl mb-3 block">
+        <div className="w-full max-w-7xl md:px-0 lg:px-12 mx-auto flex flex-col lg:flex-row !items-center justify-between">
+          <div className="">
+            <Link
+              to="/"
+              className="btn btn-ghost text-xl mb-3 block !overflow-clip"
+            >
               <img
                 src={logo}
                 alt="Icon-Facility logo"
